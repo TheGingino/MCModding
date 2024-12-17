@@ -2,8 +2,11 @@ package net.ginos.funmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.ginos.funmod.block.ModBlocks;
+import net.ginos.funmod.component.ModDataComponentTypes;
 import net.ginos.funmod.item.ModItems;
+import net.ginos.funmod.item.ModItemsGroup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,11 +20,13 @@ public class FunMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		ModItemsGroup.registerItemGroups();
+
 		ModItems.RegisterModItems();
 		ModBlocks.RegisterModBlocks();
+
+		ModDataComponentTypes.registerDataComponentTypes();
+		FuelRegistry.INSTANCE.add(ModItems.BURNT_COAL, 600);
 		LOGGER.info("Hello Fabric world!");
 	}
 }

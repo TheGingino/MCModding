@@ -2,6 +2,48 @@
 {
   "item.fun-mod.red_flint": "Red Flint",
   "item.fun-mod.raw_red_flint": "Raw Red Flint",
+  "item.fun-mod.chisel": "Chisel",
+  "item.fun-mod.frikandel": "Frikandel",
+  "item.fun-mod.burnt_coal": "Burnt Coal",
+  "item.fun-mod.red_flint_sword": "Red Flint Sword",
+  "item.fun-mod.red_flint_pickaxe": "Red Flint Pickaxe",
+  "item.fun-mod.red_flint_shovel": "Red Flint Shovel",
+  "item.fun-mod.red_flint_axe": "Red Flint Axe",
+  "item.fun-mod.red_flint_hoe": "Red Flint Hoe",
 
-  "block.fun-mod.red_flint_block": "Block of Red Flint"
+
+  "block.fun-mod.red_flint_block": "Block of Red Flint",
+  "block.fun-mod.raw_red_flint_block": "Block of Raw Red Flint",
+  "block.fun-mod.red_flint_door": "Red Flint Door",
+  "block.fun-mod.red_flint_trapdoor": "Red Flint Trap Door",
+
+  "block.fun-mod.corrupted_block": "Block of Corruption",
+
+  "block.fun-mod.corrupted_stairs": "Corrupted Stairs",
+  "block.fun-mod.corrupted_wall": "Corrupted Wall",
+  "block.fun-mod.corrupted_slab": "Corrupted Slab",
+
+  "block.fun-mod.corrupted_fence": "Corrupted Fence",
+  "block.fun-mod.corrupted_fence_gate": "Corrupted Fence Gate",
+  "block.fun-mod.corrupted_pressure_plate": "Corrupted Pressure Plate",
+  "block.fun-mod.corrupted_button": "Corrupted Button",
+
+  "block.fun-mod.red_flint_lamp":"Red Flint Lamp",
+
+  "block.fun-mod.red_flint_ore": "Red Flint Ore",
+  "block.fun-mod.red_flint_deepslate_ore": "Red Flint Deepslate Ore",
+
+  "block.fun-mod.magic_block": "Magic Block?",
+
+  "itemgroup.fun-mod.red_flint_items": "Red Flint Items",
+  "itemgroup.fun-mod.red_flint_blocks": "Red Flint Blocks",
+  "itemgroup.fun-mod.red_flint_tools": "Tools",
+  "itemgroup.fun-mod.extra_food": "Extra Food",
+
+
+  "tooltip.fun-mod.magic_block": "This Block hides something?",
+  "tooltip.fun-mod.chisel.shift_down": "This item holds great mystery",
+  "tooltip.fun-mod.chisel": "Press §eShift§r for more info",
+  "frikandel_tooltip": "§kFrikandel"
+
 }
