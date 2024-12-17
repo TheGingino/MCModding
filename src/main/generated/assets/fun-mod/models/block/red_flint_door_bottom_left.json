@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "fun-mod:block/red_flint_door_bottom",
+    "top": "fun-mod:block/red_flint_door_top"
+  }
+}

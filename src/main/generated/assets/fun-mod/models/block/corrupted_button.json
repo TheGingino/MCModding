@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "fun-mod:block/corrupted_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "fun-mod:red_flint_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "fun-mod:red_flint"
+  }
+}

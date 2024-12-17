@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "red_flint",
+  "ingredient": {
+    "item": "fun-mod:red_flint_ore"
+  },
+  "result": {
+    "id": "fun-mod:red_flint"
+  }
+}

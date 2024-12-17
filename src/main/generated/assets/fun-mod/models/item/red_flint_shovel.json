@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "fun-mod:item/red_flint_shovel"
+  }
+}

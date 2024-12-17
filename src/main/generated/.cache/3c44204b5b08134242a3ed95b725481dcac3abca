@@ -1,0 +1,7 @@
+// 1.21.1	2024-12-08T22:20:36.2941389	Fun-Mod/Tags for minecraft:item
+bd53da4e912d4915ec2034372a858e7d6723878e data\fun-mod\tags\item\transformable_items.json
+d15e1b0fbb26156a1c3f334079f993b997da60c1 data\minecraft\tags\item\hoes.json
+ad0be83ea9fb4a0b8e95f6c09852fa680753735f data\minecraft\tags\item\axes.json
+9d2d2b76c4a789fe3151a19a9f46e3532f962adb data\minecraft\tags\item\pickaxes.json
+0033fb05c0f1552f91ca0fb38d6195776a4e6d61 data\minecraft\tags\item\swords.json
+6a65edf52726469a2eae202e7e216e3d6f48423a data\minecraft\tags\item\shovels.json

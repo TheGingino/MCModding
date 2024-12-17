@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "fun-mod:block/red_flint_lamp"
+    },
+    "clicked=true": {
+      "model": "fun-mod:block/red_flint_lamp_on"
+    }
+  }
+}

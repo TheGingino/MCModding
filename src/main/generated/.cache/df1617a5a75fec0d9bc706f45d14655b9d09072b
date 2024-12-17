@@ -1,0 +1,8 @@
+// 1.21.1	2024-12-08T22:20:36.2921392	Fun-Mod/Tags for minecraft:block
+56426d993ef745f052cfebff44968c5a0109456a data\minecraft\tags\block\mineable\pickaxe.json
+46792976ceea3bfed4251520b1d4939504a5b7c0 data\minecraft\tags\block\fence_gates.json
+e4977ddcfa3ce00239bf6e842ccee5df4adec659 data\minecraft\tags\block\needs_diamond_tool.json
+ce586e9a76aa0b87234b79751855a653eaba00be data\minecraft\tags\block\fences.json
+a2f13d9569a98f704429086010cf31d1f6a869c1 data\fun-mod\tags\block\needs_red_flint_tools.json
+0f1c29086aa2a1afdd384a830c0abbf0231a434b data\minecraft\tags\block\walls.json
+c8f7a08637f8300b059ee2feb204063c47f50de0 data\minecraft\tags\block\needs_iron_tool.json
