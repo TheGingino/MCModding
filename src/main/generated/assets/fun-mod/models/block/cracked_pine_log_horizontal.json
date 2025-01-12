@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "fun-mod:block/cracked_pine_log_top",
+    "side": "fun-mod:block/cracked_pine_log"
+  }
+}

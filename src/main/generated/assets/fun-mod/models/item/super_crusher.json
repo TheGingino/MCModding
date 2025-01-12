@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "fun-mod:item/super_crusher"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "broken": 1
+      },
+      "model": "fun-mod:item/red_flint_chestplate"
+    }
+  ]
+}

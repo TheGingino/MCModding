@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond_block"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "fun-mod:burnt_coal"
+    }
+  },
+  "pattern": [
+    "III",
+    "RSR",
+    "DND"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fun-mod:super_crusher"
+  }
+}

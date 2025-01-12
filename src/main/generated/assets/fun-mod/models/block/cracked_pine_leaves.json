@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "fun-mod:block/cracked_pine_leaves"
+  }
+}

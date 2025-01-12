@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "fun-mod:block/blueberry_bush_stage2"
+  }
+}

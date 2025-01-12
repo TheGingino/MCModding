@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fun-mod:block/stripped_cracked_pine_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fun-mod:block/stripped_cracked_pine_log"
+    },
+    "axis=z": {
+      "model": "fun-mod:block/stripped_cracked_pine_log_horizontal",
+      "x": 90
+    }
+  }
+}
