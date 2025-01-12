@@ -1,7 +1,15 @@
-// 1.21.1	2024-12-08T22:20:36.2941389	Fun-Mod/Tags for minecraft:item
-bd53da4e912d4915ec2034372a858e7d6723878e data\fun-mod\tags\item\transformable_items.json
+// 1.21.1	2025-01-12T22:43:02.7950468	Fun-Mod/Tags for minecraft:item
 d15e1b0fbb26156a1c3f334079f993b997da60c1 data\minecraft\tags\item\hoes.json
+d5f4a74421a98aaef9717d7369646ca3511dbb2d data\minecraft\tags\item\logs_that_burn.json
+5e4c24b8c27bdfd8713253a87fdc1bc94eeb7ed4 data\minecraft\tags\item\planks.json
 ad0be83ea9fb4a0b8e95f6c09852fa680753735f data\minecraft\tags\item\axes.json
-9d2d2b76c4a789fe3151a19a9f46e3532f962adb data\minecraft\tags\item\pickaxes.json
-0033fb05c0f1552f91ca0fb38d6195776a4e6d61 data\minecraft\tags\item\swords.json
+285468413aa1812554fdec8a015eae87f4180a9d data\minecraft\tags\item\pickaxes.json
+110b695f25f50d504147bd09bbd9dbcf2fc3bde8 data\minecraft\tags\item\leaves.json
+f50ff4c1c4104a2bf510068b90ad0547e0cbea19 data\minecraft\tags\item\enchantable\leg_armor.json
+937d3a19c3f684c8511eb9a66f8f7a32ca67f378 data\minecraft\tags\item\enchantable\head_armor.json
 6a65edf52726469a2eae202e7e216e3d6f48423a data\minecraft\tags\item\shovels.json
+bd53da4e912d4915ec2034372a858e7d6723878e data\fun-mod\tags\item\transformable_items.json
+e51e403f75f674e8412293ad2c89c0f332d6d52e data\minecraft\tags\item\enchantable\foot_armor.json
+1f5699e11b751ef0f3a34e45006d4a5ad335e8ba data\minecraft\tags\item\trimmable_armor.json
+0033fb05c0f1552f91ca0fb38d6195776a4e6d61 data\minecraft\tags\item\swords.json
+3c286fb2526857d373ea69c00d1e9acf843f2576 data\minecraft\tags\item\enchantable\chest_armor.json

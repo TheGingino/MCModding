@@ -1,0 +1,6 @@
+{
+  "parent": "fun-mod:item/heavy_bow",
+  "textures": {
+    "layer0": "fun-mod:item/heavy_bow_pulling_1"
+  }
+}

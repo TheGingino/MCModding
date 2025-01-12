@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.ginos.funmod.FunMod;
 import net.ginos.funmod.block.ModBlocks;
 import net.ginos.funmod.item.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -95,6 +96,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('R', ModItems.RED_FLINT)
                 .input('S', Items.STICK)
                 .criterion(hasItem(ModItems.RED_FLINT),conditionsFromItem(ModItems.RED_FLINT))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.SUPER_CRUSHER,1)
+                .pattern("III")
+                .pattern("RSR")
+                .pattern("DND")
+                .input('I', Items.IRON_BLOCK)
+                .input('N', Items.NETHER_STAR)
+                .input('R', Items.REDSTONE)
+                .input('D', Items.DIAMOND_BLOCK)
+                .input('S', ModItems.BURNT_COAL)
+                .criterion(hasItem(Items.DIAMOND_BLOCK),conditionsFromItem(Items.DIAMOND_BLOCK))
+                .criterion(hasItem(ModItems.BURNT_COAL),conditionsFromItem(ModItems.BURNT_COAL))
+                .criterion(hasItem(Items.NETHER_STAR),conditionsFromItem(Items.NETHER_STAR))
                 .offerTo(recipeExporter);
 
     }

@@ -23,6 +23,11 @@ public class ModItemsGroup {
                         entries.add(ModItems.RED_FLINT_SHOVEL);
                         entries.add(ModItems.RED_FLINT_AXE);
                         entries.add(ModItems.RED_FLINT_HOE);
+
+                        entries.add(ModItems.RED_FLINT_HELMET);
+                        entries.add(ModItems.RED_FLINT_CHESTPLATE);
+                        entries.add(ModItems.RED_FLINT_LEGGINGS);
+                        entries.add(ModItems.RED_FLINT_BOOTS);
                     })
                     .build()
             );
@@ -37,6 +42,8 @@ public class ModItemsGroup {
 
                         entries.add(ModBlocks.RED_FLINT_ORE);
                         entries.add(ModBlocks.RED_FLINT_DEEPSLATE_ORE);
+                        entries.add(ModBlocks.RED_FLINT_END_ORE);
+                        entries.add(ModBlocks.RED_FLINT_NETHER_ORE);
 
                         entries.add(ModBlocks.RED_FLINT_DOOR);
                         entries.add(ModBlocks.RED_FLINT_TRAPDOOR);
@@ -59,13 +66,22 @@ public class ModItemsGroup {
     );
 
     public static final ItemGroup RED_FLINT_TOOL_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(FunMod.MOD_ID, "red_flint_tools"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CHISEL))
-                    .displayName(Text.translatable("itemgroup.fun-mod.red_flint_tools"))
+            Identifier.of(FunMod.MOD_ID, "extra_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SUPER_CRUSHER))
+                    .displayName(Text.translatable("itemgroup.fun-mod.extra_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CHISEL);
+                        entries.add(ModItems.SUPER_CRUSHER);
+                        entries.add(ModItems.HEAVY_BOW);
                         entries.add(ModBlocks.MAGIC_BLOCK);
                         entries.add(ModItems.BURNT_COAL);
+                        entries.add(ModBlocks.CRACKED_PINE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_CRACKED_PINE_WOOD);
+                        entries.add(ModBlocks.CRACKED_PINE_LOG);
+                        entries.add(ModBlocks.STRIPPED_CRACKED_PINE_LOG);
+                        entries.add(ModBlocks.CRACKED_PINE_PLANKS);
+                        entries.add(ModBlocks.CRACKED_PINE_LEAVES);
+                        entries.add(ModBlocks.CRACKED_PINE_SAPLING);
                     })
                     .build()
     );

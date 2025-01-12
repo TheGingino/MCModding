@@ -20,6 +20,12 @@
 		],
 		"fabric-datagen": [
 			"net.ginos.funmod.FunModDataGenerator"
+		],
+		"client": [
+			"net.ginos.funmod.FunModClient"
+		],
+		"terrablender": [
+			"net.ginos.funmod.world.biome.ModTerraBlender"
 		]
 	},
 	"mixins": [

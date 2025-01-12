@@ -10,6 +10,15 @@
   "item.fun-mod.red_flint_shovel": "Red Flint Shovel",
   "item.fun-mod.red_flint_axe": "Red Flint Axe",
   "item.fun-mod.red_flint_hoe": "Red Flint Hoe",
+  "item.fun-mod.red_flint_helmet": "Red Flint Helmet",
+  "item.fun-mod.red_flint_chestplate": "Red Flint Chestplate",
+  "item.fun-mod.red_flint_leggings": "Red Flint Leggings",
+  "item.fun-mod.red_flint_boots": "Red Flint Boots",
+  "item.fun-mod.blue_berry": "Blue Berry",
+
+
+  "item.fun-mod.heavy_bow": "Heavy Bow",
+  "item.fun-mod.super_crusher": "Super Crusher",
 
 
   "block.fun-mod.red_flint_block": "Block of Red Flint",
@@ -32,12 +41,16 @@
 
   "block.fun-mod.red_flint_ore": "Red Flint Ore",
   "block.fun-mod.red_flint_deepslate_ore": "Red Flint Deepslate Ore",
+  "block.fun-mod.red_flint_end_ore": "Red Flint End Ore",
+  "block.fun-mod.red_flint_nether_ore": "Red Flint Nether Ore",
 
   "block.fun-mod.magic_block": "Magic Block?",
 
+  "block.fun-mod.blue_berry_bush": "Blue Berry Bush",
+
   "itemgroup.fun-mod.red_flint_items": "Red Flint Items",
   "itemgroup.fun-mod.red_flint_blocks": "Red Flint Blocks",
-  "itemgroup.fun-mod.red_flint_tools": "Tools",
+  "itemgroup.fun-mod.extra_items": "Tools",
   "itemgroup.fun-mod.extra_food": "Extra Food",
 
 

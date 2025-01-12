@@ -24,12 +24,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RAW_RED_FLINT_BLOCK)
                 .add(ModBlocks.RED_FLINT_ORE)
                 .add(ModBlocks.RED_FLINT_DEEPSLATE_ORE)
+                .add(ModBlocks.RED_FLINT_END_ORE)
+                .add(ModBlocks.RED_FLINT_NETHER_ORE)
                 .add(ModBlocks.MAGIC_BLOCK)
                 .add(ModBlocks.CORRUPTED_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.RED_FLINT_DEEPSLATE_ORE);
+                .add(ModBlocks.RED_FLINT_DEEPSLATE_ORE)
+                .add(ModBlocks.RED_FLINT_NETHER_ORE);
 
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+            .add(ModBlocks.RED_FLINT_END_ORE);
+
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(ModBlocks.CRACKED_PINE_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.FENCES)
                 .add(ModBlocks.CORRUPTED_FENCE);
@@ -44,5 +52,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_RED_FLINT_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CRACKED_PINE_LOG)
+                .add(ModBlocks.CRACKED_PINE_WOOD)
+                .add(ModBlocks.STRIPPED_CRACKED_PINE_LOG)
+                .add(ModBlocks.STRIPPED_CRACKED_PINE_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(ModBlocks.CRACKED_PINE_LEAVES);
     }
 }

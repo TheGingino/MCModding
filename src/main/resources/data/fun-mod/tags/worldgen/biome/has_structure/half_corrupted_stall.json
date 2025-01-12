@@ -1,0 +1,9 @@
+{
+  "replace": false,
+
+  "values": [
+    "fun-mod:corrupted_biome",
+    "minecraft:plains",
+    "minecraft:meadow"
+  ]
+}

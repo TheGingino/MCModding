@@ -1,0 +1,10 @@
+{
+  "replace": false,
+
+  "values": [
+    "#minecraft:has_structure/mineshaft",
+    "fun-mod:fancy_grass",
+    "minecraft:plains",
+    "minecraft:meadow"
+  ]
+}

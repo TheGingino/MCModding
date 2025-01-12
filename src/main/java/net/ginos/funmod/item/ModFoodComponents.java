@@ -11,4 +11,7 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 200), 1.0f)
             .build();
 
+    public static final FoodComponent BLUEBERRY = new FoodComponent.Builder().nutrition(2).
+            saturationModifier(0.5f).snack().build();
+
 }

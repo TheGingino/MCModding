@@ -1,9 +1,12 @@
-// 1.21.1	2024-12-08T22:20:36.2911388	Fun-Mod/Block Loot Tables
+// 1.21.1	2025-01-12T22:43:02.7910473	Fun-Mod/Block Loot Tables
 97353823515794639a31f727c345ac5e573ea6bb data\fun-mod\loot_table\blocks\corrupted_fence.json
+09ab712413db6be65442515947fc03e970b9a155 data\fun-mod\loot_table\blocks\cracked_pine_leaves.json
 d57bc630c918271f8575c3e10b6c86ba5ab3e4a1 data\fun-mod\loot_table\blocks\red_flint_trapdoor.json
 bdb6c6158f7c51a7040b73b93d61c18d9548d8b6 data\fun-mod\loot_table\blocks\corrupted_button.json
+2e6f96f4df47b8f522a3abcc0b26c1bd2e2581a1 data\fun-mod\loot_table\blocks\cracked_pine_log.json
 2cc9b976a57bf5eaaeb15db8dcea1fdf7832b169 data\fun-mod\loot_table\blocks\corrupted_wall.json
 eb5000ad00cf280ef1d3ef91bbbee6b23e0d4365 data\fun-mod\loot_table\blocks\corrupted_pressure_plate.json
+25dd35498073d455806ec13e5940d17b994beabe data\fun-mod\loot_table\blocks\cracked_pine_wood.json
 d80979fd04383d7d5a3dcd4cf2baae7691405c96 data\fun-mod\loot_table\blocks\red_flint_deepslate_ore.json
 909d251a99d6cd3aa83bd6319c20fbbaf01e1024 data\fun-mod\loot_table\blocks\red_flint_door.json
 ece16e45a854e848a70b973d6ecd8766c743da44 data\fun-mod\loot_table\blocks\corrupted_stairs.json
@@ -11,7 +14,11 @@ ece16e45a854e848a70b973d6ecd8766c743da44 data\fun-mod\loot_table\blocks\corrupte
 0c883324a33e6c4ccb3cea46230684cb2b1772fe data\fun-mod\loot_table\blocks\corrupted_block.json
 c2f117f469ae714d538c505857326aaa0a2dd65f data\fun-mod\loot_table\blocks\corrupted_fence_gate.json
 143607434ce06f555bc714b098d1128076eb4c72 data\fun-mod\loot_table\blocks\corrupted_slab.json
+3b9feedcb988f01077cd2cb5cbab12cf54c0c233 data\fun-mod\loot_table\blocks\stripped_cracked_pine_wood.json
+ed043574614e94b69915f12d3f289acc36133f4b data\fun-mod\loot_table\blocks\blueberry_bush.json
+040bd188e732e3c3847a6333f9fd09f91caaeb70 data\fun-mod\loot_table\blocks\red_flint_nether_ore.json
 d96e98920ec651a2fefa6eaf78ee36897a4ebddb data\fun-mod\loot_table\blocks\red_flint_block.json
+100cc38071d1a6f5252772fe3c6d65064e18857d data\fun-mod\loot_table\blocks\red_flint_end_ore.json
 811df1b0566846a1c0e28d3ba339a844cdbda267 data\fun-mod\loot_table\blocks\red_flint_lamp.json
 e68d5c08db852980a7423f1065f9b36b3d8fb656 data\fun-mod\loot_table\blocks\raw_red_flint_block.json
 e5f8de84dcede6110e932572447c3607d74399ae data\fun-mod\loot_table\blocks\red_flint_ore.json

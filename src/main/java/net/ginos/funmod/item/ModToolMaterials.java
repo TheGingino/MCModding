@@ -1,15 +1,12 @@
-package net.ginos.funmod.item.custom;
+package net.ginos.funmod.item;
 
 import com.google.common.base.Suppliers;
-import net.ginos.funmod.item.ModItems;
 import net.ginos.funmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 
 import java.util.Objects;
@@ -17,7 +14,14 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     RED_FLINT(ModTags.Blocks.INCORRECT_FOR_RED_FLINT_TOOL,
-            1200, 6.0F, 2.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.RED_FLINT}));
+            1200, 6.0F, 2.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.RED_FLINT})),
+    RED_FLINT_ARMOR(ModTags.Blocks.INCORRECT_FOR_RED_FLINT_TOOL,
+            1200, 6.0F, 2.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.RED_FLINT})),
+
+    SUPER_CRUSHER(ModTags.Blocks.INCORRECT_FOR_RED_FLINT_TOOL,
+            320, 8.0F, 2.0F, 0, () -> Ingredient.ofItems(new ItemConvertible[]{Items.NETHER_STAR}))
+    ;
+
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

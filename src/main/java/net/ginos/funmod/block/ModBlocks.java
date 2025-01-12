@@ -2,8 +2,11 @@ package net.ginos.funmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ginos.funmod.FunMod;
+import net.ginos.funmod.block.custom.BlueBerryBushBlock;
 import net.ginos.funmod.block.custom.MagicBlock;
+import net.ginos.funmod.block.custom.ModSapplingBlock;
 import net.ginos.funmod.block.custom.RedFlintLampBlock;
+import net.ginos.funmod.world.tree.ModSaplingGeneration;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,6 +16,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+
+import java.util.List;
 
 public class ModBlocks {
 
@@ -32,6 +37,14 @@ public class ModBlocks {
     public static final Block RED_FLINT_DEEPSLATE_ORE = registerBlock("red_flint_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3,6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
+    public static final Block RED_FLINT_END_ORE = registerBlock("red_flint_end_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,6),
+                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.HEAVY_CORE)));
+    public static final Block RED_FLINT_NETHER_ORE = registerBlock("red_flint_nether_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,6),
+                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
+
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create().strength(1)
@@ -76,12 +89,33 @@ public class ModBlocks {
             new RedFlintLampBlock(AbstractBlock.Settings.create()
                     .strength(1f).requiresTool().luminance(state -> state.get(RedFlintLampBlock.CLICKED)? 15 :0)));
 
+   public static final Block BLUEBERRY_BUSH = registerBlockWithoutBlockItem("blueberry_bush",
+           new BlueBerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)));
 
+    public static final Block CRACKED_PINE_LOG = registerBlock("cracked_pine_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block CRACKED_PINE_WOOD = registerBlock("cracked_pine_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+    public static final Block STRIPPED_CRACKED_PINE_LOG = registerBlock("stripped_cracked_pine_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_CRACKED_PINE_WOOD = registerBlock("stripped_cracked_pine_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final Block CRACKED_PINE_PLANKS = registerBlock("cracked_pine_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block CRACKED_PINE_LEAVES = registerBlock("cracked_pine_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+    public static final Block CRACKED_PINE_SAPLING = registerBlock("cracked_pine_sapling",
+            new ModSapplingBlock(ModSaplingGeneration.CRACKED_PINE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING),CORRUPTED_BLOCK));
+
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Identifier.of(FunMod.MOD_ID, name), block);
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FunMod.MOD_ID, name), block);
-    };
+    }
 
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(FunMod.MOD_ID, name),
