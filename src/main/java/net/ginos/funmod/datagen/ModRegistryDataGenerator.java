@@ -24,6 +24,8 @@ public class ModRegistryDataGenerator extends FabricDynamicRegistryProvider {
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.DIMENSION_TYPE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.BIOME));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.MATERIAL_RULE));
+        //entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CHUNK_GENERATOR_SETTINGS));
+        //entries.addAll(registries.getWrapperOrThrow(RegistryKeys.DENSITY_FUNCTION));
 
 
     }

@@ -9,6 +9,7 @@ import net.ginos.funmod.world.biome.ModBiomeGeneration;
 import net.ginos.funmod.world.biome.surface.ModMaterialRules;
 import net.ginos.funmod.world.dimension.ModDimension;
 import net.ginos.funmod.world.gen.ModBushGeneration;
+import net.ginos.funmod.world.gen.ModDensityGeneration;
 import net.ginos.funmod.world.gen.ModNoiseGen;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
@@ -32,7 +33,8 @@ public class FunModDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimension::bootstrapType);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomeGeneration::bootstrapBiomes);
-		//registryBuilder.addRegistry(RegistryKeys.CHUNK_GENERATOR_SETTINGS, ModNoiseGen::bootstrapNoiseGen);
+		//registryBuilder.addRegistry(RegistryKeys.DENSITY_FUNCTION, ModDensityGeneration::bootstrap);
+		//registryBuilder.addRegistry(RegistryKeys.CHUNK_GENERATOR_SETTINGS, ModNoiseGen::bootstrapNoise);
 
 	}
 }

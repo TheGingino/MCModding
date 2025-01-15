@@ -2,6 +2,7 @@ package net.ginos.funmod.world.dimension;
 
 import net.ginos.funmod.FunMod;
 
+import net.ginos.funmod.world.biome.surface.ModMaterialRules;
 import net.minecraft.registry.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
@@ -10,6 +11,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionOptions;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.dimension.DimensionTypes;
+import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 
 import java.util.OptionalLong;
 
@@ -28,7 +30,7 @@ public class ModDimension {
     //public static final Identifier CORRUPTED_DIM_ID = Identifier.of(FunMod.MOD_ID, "corrupted_dim");
 
 
-    public static void bootstrapType(Registerable<DimensionType> context){
+    public static void bootstrapType(Registerable<DimensionType> context) {
         context.register(CORRUPTED_DIM_TYPE, new DimensionType(
                 OptionalLong.of(12000),
                 false,

@@ -2,7 +2,7 @@
   "type": "fun-mod:corrupted_dim_type",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:overworld",
+    "settings": "fun-mod:noise_settings",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
@@ -14,7 +14,7 @@
             "continentalness": 0.8,
             "erosion": 1,
             "weirdness": 1,
-            "depth": -1,
+            "depth": {"min": -0.5, "max": 0},
             "offset": 0.5
           }
         },
@@ -25,8 +25,8 @@
             "humidity": {"min": -1.0, "max": 1.0},
             "continentalness": {"min": -1.5, "max": -1.0},
             "erosion": {"min": -1.0, "max": 1.0},
-            "weirdness": {"min": -1.0, "max": 1.0},
-            "depth": {"min": -1.8, "max": -1.0},
+            "weirdness": {"min": -0.5, "max": 0},
+            "depth": {"min": 0, "max": 1.0},
             "offset": 0.0
           }
         },
@@ -38,7 +38,7 @@
             "continentalness": {"min": 0.5, "max": 1.2},
             "erosion": {"min": 0.5, "max": 1.75},
             "weirdness": 0.5,
-            "depth": 0.1,
+            "depth": {"min": -0.1, "max": 0},
             "offset": 1
           }
         },
@@ -224,7 +224,7 @@
           "biome": "fun-mod:fancy_grass",
           "parameters": {
             "continentalness": {"min": 0.03, "max": 0.3},
-            "depth": 0,
+            "depth": {"min": 0.6, "max": 1.0},
             "erosion": {"min": -0.375, "max": -0.2225},
             "humidity": {"min": -1, "max": -0.35},
             "offset": 0,
@@ -236,7 +236,7 @@
           "biome": "fun-mod:fancy_grass",
           "parameters": {
             "continentalness": {"min": 0.03, "max": 0.8},
-            "depth": 1,
+            "depth": {"min": 0.6, "max": 1.0},
             "erosion": {"min": -0.375, "max": -0.2225},
             "humidity": {"min": -1, "max": -0.35},
             "offset": 1,
@@ -252,7 +252,7 @@
             "continentalness": 2,
             "erosion": 2,
             "weirdness": {"min": 0.0, "max": 0.8},
-            "depth": {"min": 1.0, "max": 2.0},
+            "depth": {"min": -0.1, "max": 0},
             "offset": 0
           }
         },
@@ -264,7 +264,7 @@
             "continentalness": {"min": -1.0, "max": -0.19},
             "erosion": {"min": -1.0, "max": 1.0},
             "weirdness": {"min": -1.0, "max": 1.0},
-            "depth": {"min": -1.0, "max": 0.0},
+            "depth": {"min": 0, "max": 1.0},
             "offset": 0.0
           }
         },
@@ -276,7 +276,7 @@
             "continentalness": -2,
             "erosion": -1,
             "weirdness": -1,
-            "depth": -1,
+            "depth": {"min": -0.1, "max": 0},
             "offset": 1
           }
         },
@@ -288,7 +288,7 @@
             "continentalness": {"min": -0.11, "max": 0.3},
             "erosion": {"min": -0.7799, "max": -0.375},
             "weirdness": {"min": -1.0, "max": -0.9333},
-            "depth": {"min": -1.0, "max": 1.0},
+            "depth": {"min": -0.1, "max": 0},
             "offset": 0.0
           }
         },
@@ -300,7 +300,7 @@
             "continentalness": {"min": 0.2, "max": 2.0},
             "erosion": {"min": 0.6, "max": 1.0},
             "weirdness": {"min": 0.0, "max": 0.5},
-            "depth": {"min": 0.75, "max": 1.0},
+            "depth": {"min": -0.1, "max": 0},
             "offset": 0.5
           }
         },
@@ -312,7 +312,7 @@
             "continentalness": {"min": 0.1,"max": 1.2},
             "erosion": {"min": 0.15, "max": 0.85},
             "weirdness": {"min": 0.75, "max": 1.25},
-            "depth": -1,
+            "depth": {"min": -0.1, "max": 0},
             "offset": 0
           }
         },
@@ -324,7 +324,67 @@
             "continentalness": {"min": 0.3, "max": 1.0},
             "erosion": {"min": -0.2, "max": 0.2},
             "weirdness": {"min": -0.2, "max": 0.2},
-            "depth": {"min": -0.2, "max": 0.2},
+            "depth": {"min": -0.1, "max": 0},
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:deep_dark",
+          "parameters": {
+            "temperature": {"min": -0.5, "max": 0.0},
+            "humidity": {"min": -0.5, "max": 0.0},
+            "continentalness": {"min": -1, "max": -0.5},
+            "erosion": {"min": -1.0, "max": -0.5},
+            "weirdness": {"min": -1.0, "max": -0.8},
+            "depth": {"min": -2.0, "max": -1.0},
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:beach",
+          "parameters": {
+            "temperature": {"min": 0.5, "max": 1.0},
+            "humidity": {"min": 0.5, "max": 1.0},
+            "continentalness": {"min": -0.5, "max": 0.0},
+            "erosion": {"min": 0.5, "max": 1.0},
+            "weirdness": {"min": -0.5, "max": 0.5},
+            "depth": {"min": -0.1, "max": 0.1},
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:snowy_beach",
+          "parameters": {
+            "temperature": {"min": -1.0, "max": -0.5},
+            "humidity": {"min": 0.5, "max": 1.0},
+            "continentalness": {"min": -0.5, "max": 0.0},
+            "erosion": {"min": 0.5, "max": 1.0},
+            "weirdness": {"min": -0.5, "max": 0.5},
+            "depth": {"min": -0.1, "max": 0.1},
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:desert",
+          "parameters": {
+            "temperature": {"min": 1.0, "max": 1.5},
+            "humidity": {"min": -1.0, "max": -0.5},
+            "continentalness": {"min": 0.0, "max": 0.5},
+            "erosion": {"min": -0.5, "max": 0.0},
+            "weirdness": {"min": 0.0, "max": 0.5},
+            "depth": {"min": 0.1, "max": 0.6},
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:river",
+          "parameters": {
+            "temperature": {"min": -0.5, "max": 0.5},
+            "humidity": {"min": 0.0, "max": 1.0},
+            "continentalness": {"min": -0.5, "max": 0.0},
+            "erosion": {"min": -1.0, "max": -0.5},
+            "weirdness": {"min": -0.5, "max": 0.0},
+            "depth": {"min": -0.2, "max": 0.0},
             "offset": 0.0
           }
         }

@@ -66,7 +66,7 @@ public class ModItems {
                     .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(20))));
 
     public static final Item RED_FLINT_BOOTS = registerItem("red_flint_boots",
-            new ArmorItem(ModArmorMaterials.RED_FLINT_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.RED_FLINT_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(20))));
 
     public static final Item HEAVY_BOW = registerItem("heavy_bow",
