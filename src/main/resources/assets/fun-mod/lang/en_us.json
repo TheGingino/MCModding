@@ -19,6 +19,7 @@
 
   "item.fun-mod.heavy_bow": "Heavy Bow",
   "item.fun-mod.super_crusher": "Super Crusher",
+  "item.fun-mod.thork": "Thork",
 
 
   "block.fun-mod.red_flint_block": "Block of Red Flint",
@@ -48,10 +49,14 @@
 
   "block.fun-mod.blue_berry_bush": "Blue Berry Bush",
 
+  "enchantment.fun-mod.lightning_strike": "Lightning Strike",
+  "enchantment.fun-mod.drowned_feel": "Drowned Feel",
+
   "itemgroup.fun-mod.red_flint_items": "Red Flint Items",
   "itemgroup.fun-mod.red_flint_blocks": "Red Flint Blocks",
   "itemgroup.fun-mod.extra_items": "Tools",
   "itemgroup.fun-mod.extra_food": "Extra Food",
+  "itemgroup.fun-mod.machines_accessor": "Machines & Accessors",
 
 
   "tooltip.fun-mod.magic_block": "This Block hides something?",

@@ -6,7 +6,9 @@
 		"ExampleMixin"
 	],
 	"client": [
-		"ABstractClientPlayerEntityMixin"
+		"ABstractClientPlayerEntityMixin",
+		"ItemRendererMixin",
+		"ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

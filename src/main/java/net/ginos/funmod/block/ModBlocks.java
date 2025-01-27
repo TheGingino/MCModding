@@ -2,10 +2,7 @@ package net.ginos.funmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ginos.funmod.FunMod;
-import net.ginos.funmod.block.custom.BlueBerryBushBlock;
-import net.ginos.funmod.block.custom.MagicBlock;
-import net.ginos.funmod.block.custom.ModSapplingBlock;
-import net.ginos.funmod.block.custom.RedFlintLampBlock;
+import net.ginos.funmod.block.custom.*;
 import net.ginos.funmod.world.tree.ModSaplingGeneration;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -26,14 +23,18 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
+    public static final Block REFINER = registerBlock("refiner_block",
+            new RefinerBlock(AbstractBlock.Settings.create().strength(4f).nonOpaque()));
+
     public static final Block RAW_RED_FLINT_BLOCK = registerBlock("raw_red_flint_block",
             new Block(AbstractBlock.Settings.create().strength(2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_CLUSTER)));
 
     public static final Block RED_FLINT_ORE = registerBlock("red_flint_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
-                    AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
+            new RedFlintOreBlock(AbstractBlock.Settings.create()
+                    .strength(3f).requiresTool().sounds(BlockSoundGroup.STONE),UniformIntProvider.create(1,8)));
+
     public static final Block RED_FLINT_DEEPSLATE_ORE = registerBlock("red_flint_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3,6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));

@@ -1,0 +1,12 @@
+{
+  "map": [
+    {
+      "predicate": {
+        "materialPredicate": {
+          "texture": "fun-mod:textures/entity/thork.png"
+        }
+      },
+      "material": "canvas:emissive_transform"
+    }
+  ]
+}

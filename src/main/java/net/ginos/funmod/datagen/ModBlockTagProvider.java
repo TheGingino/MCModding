@@ -28,6 +28,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RED_FLINT_NETHER_ORE)
                 .add(ModBlocks.MAGIC_BLOCK)
                 .add(ModBlocks.CORRUPTED_BLOCK);
+                //.add(ModBlocks.TEST_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RED_FLINT_DEEPSLATE_ORE)

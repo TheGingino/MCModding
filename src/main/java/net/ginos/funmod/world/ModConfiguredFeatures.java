@@ -34,25 +34,25 @@ public class ModConfiguredFeatures {
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest stoneReplaceables = new BlockMatchRuleTest(Blocks.STONE);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
         RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> overworldRedFlintOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.RED_FLINT_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.RED_FLINT_DEEPSLATE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.RED_FLINT_ORE.getDefaultState())
+        ,OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.RED_FLINT_DEEPSLATE_ORE.getDefaultState()));
 
-        List<OreFeatureConfig.Target> netherRedFlintOres =
-                List.of(OreFeatureConfig.createTarget(netherReplaceables, ModBlocks.RED_FLINT_NETHER_ORE.getDefaultState()));
+        //List<OreFeatureConfig.Target> netherRedFlintOres =
+        //        List.of(OreFeatureConfig.createTarget(netherReplaceables, ModBlocks.RED_FLINT_NETHER_ORE.getDefaultState()));
 
-        List<OreFeatureConfig.Target> endRedFlintOres =
-                List.of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.RED_FLINT_END_ORE.getDefaultState()));
+        // List<OreFeatureConfig.Target> endRedFlintOres =
+        //        List.of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.RED_FLINT_END_ORE.getDefaultState()));
 
 
         register(context, RED_FLINT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldRedFlintOres,6));
-        register(context, END_RED_FLINT_ORE_KEY, Feature.ORE, new OreFeatureConfig(endRedFlintOres,1));
-        register(context, NETHER_RED_FLINT_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRedFlintOres,1));
+        //register(context, END_RED_FLINT_ORE_KEY, Feature.ORE, new OreFeatureConfig(endRedFlintOres,1));
+        //register(context, NETHER_RED_FLINT_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherRedFlintOres,1));
 
         register(context, CRACKED_PINE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.CRACKED_PINE_LOG),

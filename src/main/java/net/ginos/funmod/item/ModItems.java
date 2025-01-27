@@ -3,9 +3,11 @@ package net.ginos.funmod.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ginos.funmod.FunMod;
 import net.ginos.funmod.block.ModBlocks;
+import net.ginos.funmod.entity.ModEntities;
 import net.ginos.funmod.item.custom.ChiselItem;
 import net.ginos.funmod.item.custom.HammerItem;
 import net.ginos.funmod.item.custom.ModArmorItem;
+import net.ginos.funmod.item.custom.ThorkItem;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.BannerPatternsComponent;
 import net.minecraft.item.*;
@@ -75,8 +77,17 @@ public class ModItems {
     public static final Item BLUEBERRY = registerItem("blue_berry",
             new AliasedBlockItem(ModBlocks.BLUEBERRY_BUSH, new Item.Settings().food(ModFoodComponents.BLUEBERRY)));
 
+    public static final Item RAW_HORSE = registerItem("raw_horse",
+            new Item(new Item.Settings().food(ModFoodComponents.RAW_HORSE)));
+    public static final Item COOKED_HORSE = registerItem("cooked_horse",
+            new Item(new Item.Settings().food(ModFoodComponents.COOKED_HORSE)));
+
+    public static final Item THORK = registerItem("thork",
+            new ThorkItem(new Item.Settings().maxDamage(600).maxCount(1).rarity(Rarity.RARE).attributeModifiers(ThorkItem.createAttributeModifiers())
+                    .component(DataComponentTypes.TOOL, ThorkItem.createToolComponent()), ModEntities.THORK));
+
     public static final Item DIAMOND_SHIELD = registerItem("diamond_shield",
-            new ShieldItem((new Item.Settings()).maxDamage(336).component(DataComponentTypes.BANNER_PATTERNS, BannerPatternsComponent.DEFAULT)));
+            new ShieldItem((new Item.Settings()).maxDamage(500).component(DataComponentTypes.BANNER_PATTERNS, BannerPatternsComponent.DEFAULT)));
 
     public static final Item CORRUPTED_ELYTRA = registerItem("corrupted_elytra",
             new ElytraItem((new Item.Settings()).maxDamage(432).rarity(Rarity.UNCOMMON)));

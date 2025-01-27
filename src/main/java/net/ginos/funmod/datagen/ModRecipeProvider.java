@@ -6,11 +6,12 @@ import net.ginos.funmod.FunMod;
 import net.ginos.funmod.block.ModBlocks;
 import net.ginos.funmod.item.ModItems;
 import net.minecraft.block.Block;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.*;
+import net.minecraft.recipe.book.CookingRecipeCategory;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -27,9 +28,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public void generate(RecipeExporter recipeExporter) {
         List<ItemConvertible> RED_FLINT_SMELTABLE = List.of(ModItems.RAW_RED_FLINT, ModBlocks.RED_FLINT_ORE,
                 ModBlocks.RED_FLINT_DEEPSLATE_ORE);
+        List<ItemConvertible> FRIKANDEL_SMELTABLE = List.of(ModItems.RAW_HORSE);
+        List<ItemConvertible> RED_FLINT_CRAFTABLE = List.of(ModBlocks.RED_FLINT_DOOR,ModBlocks.RED_FLINT_TRAPDOOR);
 
         offerSmelting(recipeExporter, RED_FLINT_SMELTABLE, RecipeCategory.MISC, ModItems.RED_FLINT, 0.25f, 200, "red_flint");
         offerBlasting(recipeExporter, RED_FLINT_SMELTABLE, RecipeCategory.MISC, ModItems.RED_FLINT, 0.25f, 100, "red_flint");
+
+        offerSmelting(recipeExporter, FRIKANDEL_SMELTABLE, RecipeCategory.FOOD, ModItems.COOKED_HORSE, 0.25f, 200, "cooked_horse");
+        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(ModItems.RAW_HORSE),RecipeCategory.FOOD,ModItems.COOKED_HORSE, 0.25f,100).criterion(hasItem(ModItems.RAW_HORSE),conditionsFromItem(ModItems.RAW_HORSE))
+                .offerTo(recipeExporter);
+
 
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RED_FLINT, RecipeCategory.DECORATIONS, ModBlocks.RED_FLINT_BLOCK);
 
@@ -112,5 +120,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.NETHER_STAR),conditionsFromItem(Items.NETHER_STAR))
                 .offerTo(recipeExporter);
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FRIKANDEL,1)
+                .input(ModItems.RAW_HORSE)
+                .input(Items.BEEF)
+                .input(Items.MUTTON)
+                .criterion(hasItem(ModItems.RAW_HORSE),conditionsFromItem(ModItems.RAW_HORSE))
+                .offerTo(recipeExporter);
+        createTrapdoorRecipe(ModBlocks.RED_FLINT_TRAPDOOR, Ingredient.ofItems(ModItems.RED_FLINT))
+                .criterion(hasItem(ModItems.RED_FLINT),conditionsFromItem(ModItems.RED_FLINT))
+                .offerTo(recipeExporter,Identifier.of(FunMod.MOD_ID,"red_flint_trap_door"));
+
+        createDoorRecipe(ModBlocks.RED_FLINT_DOOR, Ingredient.ofItems(ModItems.RED_FLINT))
+                .criterion(hasItem(ModItems.RED_FLINT),conditionsFromItem(ModItems.RED_FLINT))
+                .offerTo(recipeExporter,Identifier.of(FunMod.MOD_ID,"red_flint_door"));
+
+    }
+    public static void offerSmoking(RecipeExporter exporter, List<ItemConvertible> inputs, RecipeCategory category, ItemConvertible output, float experience, int cookingTime, String group) {
+        offerMultipleOptions(exporter, RecipeSerializer.SMOKING, SmokingRecipe::new, inputs, category, output, experience, cookingTime, group, "_from_blasting");
     }
 }
+

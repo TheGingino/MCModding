@@ -1,6 +1,7 @@
-// 1.21.1	2025-01-15T20:57:21.3157934	Fun-Mod/Recipes
+// 1.21.1	2025-01-27T20:13:57.1601033	Fun-Mod/Recipes
 cb0f37d48d956ba64bc1a4bd3ab3ffda63c69e25 data\fun-mod\advancement\recipes\building_blocks\red_flint.json
 d16e635368c1ce0b8ce9faebdb7540bc7856e5ee data\fun-mod\advancement\recipes\misc\raw_red_flint.json
+ac5b4c5210aee3df2e7cbc2425d8f814f5154f9e data\fun-mod\recipe\cooked_horse.json
 57e27dee046cc6565193f4dbe80126b0ac0236a8 data\fun-mod\recipe\red_flint.json
 b7f3bde9a833a84318059f6697adbfd3e08fca95 data\fun-mod\recipe\red_flint_shovel.json
 d7f65118c612eed2878493cac78e98761027d894 data\fun-mod\advancement\recipes\misc\red_flint_from_blasting_raw_red_flint.json
@@ -9,9 +10,11 @@ d7f65118c612eed2878493cac78e98761027d894 data\fun-mod\advancement\recipes\misc\r
 3e4da08c3a1695f9783b29c78ff0cea029afb55a data\fun-mod\recipe\raw_red_flint_block_from_magic_block.json
 b12cdacd521b552737142596605432749b85fad3 data\fun-mod\advancement\recipes\decorations\red_flint_block.json
 4922b18337d626c0d19c54b0ac6593432bc7ebdb data\fun-mod\advancement\recipes\misc\red_flint_from_smelting_red_flint_ore.json
+1760a9111d4c549a7ef66f58c0394168d449b0f2 data\fun-mod\advancement\recipes\food\frikandel.json
 27e345bba13716f7253e2eef9686fccfa8ab98b7 data\fun-mod\recipe\red_flint_axe.json
 f4c594d0d2206e58177250167a28140e5614c0ec data\fun-mod\recipe\red_flint_hoe.json
 62f0ba2a652ef55fc6359769e2c9c5eed924b4b4 data\fun-mod\recipe\super_crusher.json
+9b048332c5bad1be343ed0f8bf6dad33ae35b041 data\fun-mod\advancement\recipes\food\cooked_horse_from_smelting_raw_horse.json
 562c4aec4d7ebe3ab85fee64a1afa303eee701e3 data\fun-mod\advancement\recipes\tools\super_crusher.json
 c9c91b36d97817c38d2b8d614b97ab095fd5b1f8 data\fun-mod\recipe\raw_red_flint.json
 afadfe9be557603ee4761f793b43d99ef914724e data\fun-mod\recipe\raw_red_flint_block.json
@@ -20,16 +23,23 @@ d050607290f851351ff5286fac73d1b7d23482be data\fun-mod\recipe\red_flint_from_blas
 669a1dedd775d99bd91457bba9e56effb689d6b4 data\fun-mod\advancement\recipes\tools\red_flint_hoe.json
 9332d36672d2dcb9ca99550d273f9ff6f402e48d data\fun-mod\advancement\recipes\misc\red_flint_from_blasting_red_flint_ore.json
 3746ff7f8d45f20e7e7359bb1fe16ae0417ff1f2 data\fun-mod\recipe\red_flint_block.json
+565c25c1cdbc57d7464c555f62c59fe2da3bb443 data\fun-mod\advancement\recipes\redstone\red_flint_trap_door.json
 e5ebeae8a081bd1dbffac7077d0a3dbbb07cf3e1 data\fun-mod\advancement\recipes\tools\red_flint_sword.json
 5acf08f14f9d3256a21641db2c0f38040b061d0a data\fun-mod\advancement\recipes\misc\red_flint_from_smelting_raw_red_flint.json
 b94307a24420576a203f6473553f2aca71866027 data\fun-mod\advancement\recipes\misc\red_flint_from_blasting_red_flint_deepslate_ore.json
+01f4db3cec5ff22bd43a203d416fcb2b78f00b25 data\fun-mod\recipe\red_flint_trap_door.json
+ccd3d62999957f4f3320cfc379b70717120f853d data\fun-mod\recipe\cooked_horse_from_smelting_raw_horse.json
+cc25c34f56da59a3efc8389247937203d3a23976 data\fun-mod\recipe\frikandel.json
+49a5ef5637793e4dad6e1de8e1c952f3aff96901 data\fun-mod\advancement\recipes\redstone\red_flint_door.json
 65c0cfbb45028efc7c729d161700660857243e7a data\fun-mod\recipe\red_flint_from_blasting_red_flint_ore.json
 f009cbb05c3bcf93b8b53375bccb94a5b6f87386 data\fun-mod\advancement\recipes\misc\raw_red_flint_block.json
 b717c954c41626a6d873f1a85edf1840d90d8ca6 data\fun-mod\advancement\recipes\misc\red_flint_from_smelting_red_flint_deepslate_ore.json
+ffdbe8bab13f7357543c0df016dd80aa1b160f2c data\fun-mod\advancement\recipes\food\cooked_horse.json
 26c33cbe7aa703cecff0ac102a194820af68d83a data\fun-mod\recipe\red_flint_from_smelting_red_flint_ore.json
 bc350f0b53c627b5877967f21ead9801f0aeb835 data\fun-mod\recipe\red_flint_from_smelting_raw_red_flint.json
 c9cf8bdd62609edd93f82ae7523398378dad5a11 data\fun-mod\advancement\recipes\tools\red_flint_shovel.json
 2ae5c3f2254c1c5d01cf64eddbd4a87f7fe3a87b data\fun-mod\recipe\red_flint_pickaxe.json
+9f1773c09419c6a07b804e1fdeb764791a99b786 data\fun-mod\recipe\red_flint_door.json
 d04cd0036153c42506507fc3b910c99a5eb85afb data\fun-mod\advancement\recipes\tools\red_flint_axe.json
 75186459d23c22f07a89719ca311806abd5c209a data\fun-mod\advancement\recipes\misc\raw_red_flint_block_from_magic_block.json
 e76d332a8ce682c462325672367408278cde6f3a data\fun-mod\recipe\red_flint_from_blasting_raw_red_flint.json

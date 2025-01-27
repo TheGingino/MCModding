@@ -2,11 +2,13 @@ package net.ginos.funmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.ginos.funmod.FunMod;
 import net.ginos.funmod.block.ModBlocks;
 import net.ginos.funmod.block.custom.BlueBerryBushBlock;
 import net.ginos.funmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.server.loottable.EntityLootTableGenerator;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -20,9 +22,12 @@ import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
+import javax.swing.text.html.parser.Entity;
 import java.util.concurrent.CompletableFuture;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
@@ -81,6 +86,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CRACKED_PINE_LOG);
         addDrop(ModBlocks.CRACKED_PINE_WOOD);
         addDrop(ModBlocks.STRIPPED_CRACKED_PINE_WOOD);
+
+        //addDrop(ModBlocks.TEST_BLOCK);
 
     }
 

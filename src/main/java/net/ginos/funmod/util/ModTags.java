@@ -12,7 +12,7 @@ public class ModTags {
     public static class Blocks{
         public static final TagKey<Block> NEEDS_RED_FLINT_TOOL = createTag("needs_red_flint_tools");
         public static final TagKey<Block> INCORRECT_FOR_RED_FLINT_TOOL = createTag("incorrect_for_red_flint_tool");
-
+        public static final TagKey<Block> THORK_MODDIFIER = createTag("thork_modifier");
 
 
         private static TagKey<Block> createTag(String name){

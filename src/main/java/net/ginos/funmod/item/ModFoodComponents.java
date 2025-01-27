@@ -11,7 +11,9 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 200), 1.0f)
             .build();
 
+    public static final FoodComponent RAW_HORSE = new FoodComponent.Builder().nutrition(3).saturationModifier(0.3F).build();
+    public static final FoodComponent COOKED_HORSE = new FoodComponent.Builder().nutrition(8).saturationModifier(0.8F).build();
+
     public static final FoodComponent BLUEBERRY = new FoodComponent.Builder().nutrition(2).
             saturationModifier(0.5f).snack().build();
-
 }

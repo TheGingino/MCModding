@@ -7,6 +7,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 
 import java.util.Objects;
@@ -19,8 +20,12 @@ public enum ModToolMaterials implements ToolMaterial {
             1200, 6.0F, 2.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.RED_FLINT})),
 
     SUPER_CRUSHER(ModTags.Blocks.INCORRECT_FOR_RED_FLINT_TOOL,
-            320, 8.0F, 2.0F, 0, () -> Ingredient.ofItems(new ItemConvertible[]{Items.NETHER_STAR}))
+            320, 8.0F, 2.0F, 0, () -> Ingredient.ofItems(new ItemConvertible[]{Items.NETHER_STAR})),
+    THORK(ModTags.Blocks.THORK_MODDIFIER,
+            600,6,8,18, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.THORK})),
     ;
+
+
 
 
     private final TagKey<Block> inverseTag;

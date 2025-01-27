@@ -72,6 +72,7 @@ public class ModItemsGroup {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.CHISEL);
                         entries.add(ModItems.SUPER_CRUSHER);
+                        entries.add(ModItems.THORK);
                         entries.add(ModItems.HEAVY_BOW);
                         entries.add(ModBlocks.MAGIC_BLOCK);
                         entries.add(ModItems.BURNT_COAL);
@@ -92,6 +93,15 @@ public class ModItemsGroup {
                     .displayName(Text.translatable("itemgroup.fun-mod.extra_food"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.FRIKANDEL);
+                    })
+                    .build()
+    );
+    public static final ItemGroup MACHINES_ACCESSOR = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(FunMod.MOD_ID, "machines_accessor"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.REFINER))
+                    .displayName(Text.translatable("itemgroup.fun-mod.machines_accessor"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.REFINER);
                     })
                     .build()
     );

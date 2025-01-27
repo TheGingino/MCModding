@@ -10,16 +10,13 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.ginos.funmod.block.ModBlocks;
 import net.ginos.funmod.commands.ModCommands;
 import net.ginos.funmod.component.ModDataComponentTypes;
+import net.ginos.funmod.enchantment.ModEnchantmentEffects;
+import net.ginos.funmod.entity.ModBlockEntityTypes;
 import net.ginos.funmod.item.ModItems;
 import net.ginos.funmod.item.ModItemsGroup;
+import net.ginos.funmod.util.ModLootTableModifiers;
 import net.ginos.funmod.util.SuperCrusherUseEvent;
-import net.ginos.funmod.world.dimension.ModDimension;
-import net.ginos.funmod.world.gen.ModDimensionGeneration;
 import net.ginos.funmod.world.gen.ModWorldGeneration;
-import net.kyrptonaught.customportalapi.CustomPortalApiRegistry;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FireBlock;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +40,11 @@ public class FunMod implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 		FuelRegistry.INSTANCE.add(ModItems.BURNT_COAL, 600);
 
+		//Effects
+		//Potions
+		ModEnchantmentEffects.registerEnchantmentEffects();
+
+
 		PlayerBlockBreakEvents.BEFORE.register(new SuperCrusherUseEvent());
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.BLUEBERRY, 0.15f);
@@ -57,6 +59,8 @@ public class FunMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.CRACKED_PINE_LEAVES, 5, 5);
 		ModWorldGeneration.generateModWorldGen();
 		ModCommands.registerCommands();
+		ModLootTableModifiers.modifyLootTables();
+		ModBlockEntityTypes.initialize();
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(ModBlocks.MAGIC_BLOCK)

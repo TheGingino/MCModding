@@ -8,6 +8,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import org.joml.Vector2d;
 
 import java.util.ArrayList;
 import java.util.List;

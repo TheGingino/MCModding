@@ -68,5 +68,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.LEAVES)
                 .add(ModBlocks.CRACKED_PINE_LEAVES.asItem());
+
+        getOrCreateTagBuilder(ItemTags.TRIDENT_ENCHANTABLE)
+                .add(ModItems.THORK);
     }
 }
