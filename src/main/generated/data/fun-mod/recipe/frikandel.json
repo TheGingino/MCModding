@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fun-mod:raw_horse"
+    },
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "minecraft:mutton"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "fun-mod:frikandel"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "cooked_horse",
+  "ingredient": {
+    "item": "fun-mod:raw_horse"
+  },
+  "result": {
+    "id": "fun-mod:cooked_horse"
+  }
+}

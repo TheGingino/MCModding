@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "use_count=0": {
+      "model": "fun-mod:block/red_flint_ore_stage0"
+    },
+    "use_count=1": {
+      "model": "fun-mod:block/red_flint_ore_stage1"
+    },
+    "use_count=2": {
+      "model": "fun-mod:block/red_flint_ore_stage2"
+    }
+  }
+}

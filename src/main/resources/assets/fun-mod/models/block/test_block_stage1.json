@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "fun-mod:block/red_flint_ore1"
+  }
+}
