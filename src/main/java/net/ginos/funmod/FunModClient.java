@@ -5,7 +5,9 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.ginos.funmod.block.ModBlocks;
+import net.ginos.funmod.entity.ModBlockEntityTypes;
 import net.ginos.funmod.entity.ModEntities;
+import net.ginos.funmod.entity.Thork.ThorkEntity;
 import net.ginos.funmod.entity.Thork.ThorkEntityModel;
 import net.ginos.funmod.entity.Thork.ThorkEntityRenderer;
 import net.ginos.funmod.item.custom.ThorkItem;
@@ -23,9 +25,9 @@ public class FunModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CRACKED_PINE_SAPLING, RenderLayer.getCutout());
 
         ModModelPredicates.registerModelPredicates();
-        //EntityRendererRegistry.register(ModEntities.THORK, ThorkEntityRenderer::new);
-        //EntityModelLayerRegistry.registerModelLayer(ThorkEntityRenderer.THORK_LAYER, ThorkEntityModel::getTexturedModelData);
 
 
+        EntityModelLayerRegistry.registerModelLayer(ThorkEntityModel.THORK, ThorkEntityModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.THORK, ThorkEntityRenderer::new);
     }
 }

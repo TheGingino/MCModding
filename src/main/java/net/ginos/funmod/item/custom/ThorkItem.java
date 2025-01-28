@@ -1,6 +1,8 @@
 package net.ginos.funmod.item.custom;
 
 import net.ginos.funmod.entity.Thork.ThorkEntity;
+import net.ginos.funmod.entity.Thork.ThorkEntityRenderer;
+import net.minecraft.client.render.entity.TridentEntityRenderer;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.component.type.ToolComponent;
@@ -17,6 +19,7 @@ import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ProjectileItem;
 import net.minecraft.item.TridentItem;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Position;
@@ -26,12 +29,16 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.Objects;
 
-public class ThorkItem extends TridentItem {
+public class ThorkItem extends Item {
 
     EntityType<? extends ThorkEntity> type;
     public ThorkItem(Item.Settings settings,EntityType<? extends ThorkEntity> entityType) {
         super(settings);
         this.type = entityType;
+    }
+
+    public EntityType<? extends ThorkEntity> getEntityType() {
+        return type;
     }
 
     public static AttributeModifiersComponent createAttributeModifiers() {
@@ -48,14 +55,12 @@ public class ThorkItem extends TridentItem {
         if (user instanceof PlayerEntity playerEntity) {
             if (!world.isClient) {
                 stack.damage(1, playerEntity, LivingEntity.getSlotForHand(user.getActiveHand()));
-                ProjectileEntity tridentEntity = createEntity(world, user, stack);
+                ThorkEntity tridentEntity = new ThorkEntity(world, user, stack);
                 tridentEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 1.0F); // Adjust velocity as needed
                 world.spawnEntity(tridentEntity);
 
             }
         }
-
-        //super.onStoppedUsing(stack, world, user, remainingUseTicks);
     }
     public ProjectileEntity createEntity(World world, LivingEntity user, ItemStack stack) {
         ThorkEntity thorkEntity = new ThorkEntity(world,user, stack.copyAndEmpty());
@@ -63,4 +68,5 @@ public class ThorkItem extends TridentItem {
         thorkEntity.setOwner(user);
         return thorkEntity;
     }
+
 }

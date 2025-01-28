@@ -4,12 +4,16 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ginos.funmod.FunMod;
 import net.ginos.funmod.block.ModBlocks;
 import net.ginos.funmod.entity.ModEntities;
+import net.ginos.funmod.entity.Thork.ThorkEntity;
 import net.ginos.funmod.item.custom.ChiselItem;
 import net.ginos.funmod.item.custom.HammerItem;
 import net.ginos.funmod.item.custom.ModArmorItem;
 import net.ginos.funmod.item.custom.ThorkItem;
+import net.minecraft.block.DispenserBlock;
+import net.minecraft.block.dispenser.ProjectileDispenserBehavior;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.BannerPatternsComponent;
+import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -17,8 +21,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.util.math.Position;
+import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ModItems {
     public static final Item RED_FLINT = registerItem("red_flint", new Item(new Item.Settings()));
@@ -83,7 +90,7 @@ public class ModItems {
             new Item(new Item.Settings().food(ModFoodComponents.COOKED_HORSE)));
 
     public static final Item THORK = registerItem("thork",
-            new ThorkItem(new Item.Settings().maxDamage(600).maxCount(1).rarity(Rarity.RARE).attributeModifiers(ThorkItem.createAttributeModifiers())
+            new ThorkItem(new Item.Settings().maxDamage(600).maxCount(1).attributeModifiers(ThorkItem.createAttributeModifiers())
                     .component(DataComponentTypes.TOOL, ThorkItem.createToolComponent()), ModEntities.THORK));
 
     public static final Item DIAMOND_SHIELD = registerItem("diamond_shield",
@@ -99,11 +106,9 @@ public class ModItems {
     public static void RegisterModItems() {
         FunMod.LOGGER.info("Registering Mod Items" + FunMod.MOD_ID);
 
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(RED_FLINT);
             entries.add(RAW_RED_FLINT);
         });
     }
-
 }

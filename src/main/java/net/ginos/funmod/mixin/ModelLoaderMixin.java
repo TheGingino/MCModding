@@ -1,6 +1,7 @@
 package net.ginos.funmod.mixin;
 
 import net.ginos.funmod.FunMod;
+import net.ginos.funmod.item.renderer.ModItemRenderer;
 import net.minecraft.client.render.model.ModelLoader;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.util.Identifier;
@@ -17,6 +18,6 @@ public abstract class ModelLoaderMixin {
 
     @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;loadItemModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 1))
     private void onInit(CallbackInfo ci) {
-        this.loadItemModel(ModelIdentifier.ofInventoryVariant(Identifier.of(FunMod.MOD_ID, "thork_3d")));
+        this.loadItemModel(ModItemRenderer.THORK_3D);
     }
 }

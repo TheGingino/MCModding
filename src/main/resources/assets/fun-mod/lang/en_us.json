@@ -62,6 +62,9 @@
   "tooltip.fun-mod.magic_block": "This Block hides something?",
   "tooltip.fun-mod.chisel.shift_down": "This item holds great mystery",
   "tooltip.fun-mod.chisel": "Press §eShift§r for more info",
-  "frikandel_tooltip": "§kFrikandel"
+  "frikandel_tooltip": "§kFrikandel",
+
+
+  "entity.fun-mod.thork": "Thorking"
 
 }

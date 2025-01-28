@@ -3,6 +3,7 @@ package net.ginos.funmod.mixin;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.ginos.funmod.FunMod;
 import net.ginos.funmod.item.ModItems;
+import net.ginos.funmod.item.renderer.ModItemRenderer;
 import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
@@ -33,7 +34,7 @@ public abstract class ItemRendererMixin {
     )
     public BakedModel renderItem(BakedModel bakedModel, @Local(argsOnly = true) ItemStack stack, @Local(argsOnly = true) ModelTransformationMode renderMode) {
         if (stack.getItem() == ModItems.THORK && (renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED)) {
-            return getModels().getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(FunMod.MOD_ID, "thork")));
+            return getModels().getModelManager().getModel(ModItemRenderer.THORK);
         }
 
         return bakedModel;
@@ -46,7 +47,7 @@ public abstract class ItemRendererMixin {
     )
     public BakedModel getHeldItemModelMixin(BakedModel bakedModel, @Local(argsOnly = true) ItemStack stack) {
         if (stack.getItem() == ModItems.THORK) {
-            return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(FunMod.MOD_ID, "spectre_staff_3d")));
+            return this.models.getModelManager().getModel(ModItemRenderer.THORK_3D);
         }
 
         return bakedModel;

@@ -2,12 +2,13 @@
   "parent": "item/generated",
   "gui_light": "front",
   "textures": {
-    "layer0": "fun-mod:item/thork"
+    "layer0": "fun-mod:item/thork",
+    "particle": "fun-mod:item/thork"
   },
   "display": {
     "thirdperson_righthand": {
       "rotation": [ 0, -90, 55 ],
-      "translation": [ 0, 8.0, 1.0 ],
+      "translation": [ 4, 8.0, 1.0 ],
       "scale": [ 2.0, 2.0, 2.0 ]
     },
     "thirdperson_lefthand": {

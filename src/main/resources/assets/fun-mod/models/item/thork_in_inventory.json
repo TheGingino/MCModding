@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:item/generated",
-    "textures": {
-        "layer0": "fun-mod:item/thork",
-        "particle": "fun-mod:item/thork"
-    }
-}

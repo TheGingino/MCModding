@@ -1,7 +1,7 @@
-// 1.21.1	2025-01-27T20:13:57.1601033	Fun-Mod/Tags for minecraft:block
+// 1.21.1	2025-01-28T17:21:15.8264265	Fun-Mod/Tags for minecraft:block
 b2b6550c38d0c7a1b8d2b4ba086451b1626565dd data\minecraft\tags\block\mineable\pickaxe.json
-46792976ceea3bfed4251520b1d4939504a5b7c0 data\minecraft\tags\block\fence_gates.json
 87310ce089bbe4ca818ce09a550c9f309daeee2e data\minecraft\tags\block\logs_that_burn.json
+46792976ceea3bfed4251520b1d4939504a5b7c0 data\minecraft\tags\block\fence_gates.json
 a72aa89ffd41e8fa090728a57b507d9c3b274131 data\minecraft\tags\block\needs_diamond_tool.json
 110b695f25f50d504147bd09bbd9dbcf2fc3bde8 data\minecraft\tags\block\leaves.json
 ce586e9a76aa0b87234b79751855a653eaba00be data\minecraft\tags\block\fences.json

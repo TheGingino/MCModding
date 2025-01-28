@@ -1,0 +1,15 @@
+{
+    "parent": "minecraft:item/trident_in_hand",
+    "textures": {
+        "layer0": "fun-mod:item/thork_3d",
+        "particle": "fun-mod:item/thork_3d"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "throwing": 1
+            },
+            "model": "fun-mod:item/thork"
+        }
+    ]
+}
