@@ -11,7 +11,10 @@ import net.ginos.funmod.entity.Thork.ThorkEntity;
 import net.ginos.funmod.entity.Thork.ThorkEntityModel;
 import net.ginos.funmod.entity.Thork.ThorkEntityRenderer;
 import net.ginos.funmod.item.custom.ThorkItem;
+import net.ginos.funmod.screen.ModScreenHandlers;
+import net.ginos.funmod.screen.RefinerBlockScreen;
 import net.ginos.funmod.util.ModModelPredicates;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 
 public class FunModClient implements ClientModInitializer {
@@ -29,5 +32,7 @@ public class FunModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ThorkEntityModel.THORK, ThorkEntityModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.THORK, ThorkEntityRenderer::new);
+        HandledScreens.register(ModScreenHandlers.REFINER_BLOCK_SCREEN, RefinerBlockScreen::new);
+
     }
 }

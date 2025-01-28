@@ -57,6 +57,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_PINE_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.CRACKED_PINE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.CRACKED_PINE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerSimpleState(ModBlocks.REFINER_BLOCK);
     }
 
     @Override

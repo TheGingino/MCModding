@@ -19,7 +19,6 @@ import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ProjectileItem;
 import net.minecraft.item.TridentItem;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Position;
@@ -29,16 +28,12 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.Objects;
 
-public class ThorkItem extends Item {
+public class ThorkItem extends TridentItem {
 
     EntityType<? extends ThorkEntity> type;
     public ThorkItem(Item.Settings settings,EntityType<? extends ThorkEntity> entityType) {
         super(settings);
         this.type = entityType;
-    }
-
-    public EntityType<? extends ThorkEntity> getEntityType() {
-        return type;
     }
 
     public static AttributeModifiersComponent createAttributeModifiers() {
@@ -55,14 +50,14 @@ public class ThorkItem extends Item {
         if (user instanceof PlayerEntity playerEntity) {
             if (!world.isClient) {
                 stack.damage(1, playerEntity, LivingEntity.getSlotForHand(user.getActiveHand()));
-                ThorkEntity tridentEntity = new ThorkEntity(world, user, stack);
+                ThorkEntity tridentEntity = createEntity(world, user, stack);
                 tridentEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 1.0F); // Adjust velocity as needed
                 world.spawnEntity(tridentEntity);
 
             }
         }
     }
-    public ProjectileEntity createEntity(World world, LivingEntity user, ItemStack stack) {
+    public ThorkEntity createEntity(World world, LivingEntity user, ItemStack stack) {
         ThorkEntity thorkEntity = new ThorkEntity(world,user, stack.copyAndEmpty());
         thorkEntity.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
         thorkEntity.setOwner(user);

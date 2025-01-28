@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-28T17:21:15.8224368	Fun-Mod/Block Loot Tables
+// 1.21.1	2025-01-28T23:22:47.7259946	Fun-Mod/Block Loot Tables
 97353823515794639a31f727c345ac5e573ea6bb data\fun-mod\loot_table\blocks\corrupted_fence.json
 09ab712413db6be65442515947fc03e970b9a155 data\fun-mod\loot_table\blocks\cracked_pine_leaves.json
 d57bc630c918271f8575c3e10b6c86ba5ab3e4a1 data\fun-mod\loot_table\blocks\red_flint_trapdoor.json
@@ -16,8 +16,8 @@ c2f117f469ae714d538c505857326aaa0a2dd65f data\fun-mod\loot_table\blocks\corrupte
 143607434ce06f555bc714b098d1128076eb4c72 data\fun-mod\loot_table\blocks\corrupted_slab.json
 3b9feedcb988f01077cd2cb5cbab12cf54c0c233 data\fun-mod\loot_table\blocks\stripped_cracked_pine_wood.json
 ed043574614e94b69915f12d3f289acc36133f4b data\fun-mod\loot_table\blocks\blueberry_bush.json
-040bd188e732e3c3847a6333f9fd09f91caaeb70 data\fun-mod\loot_table\blocks\red_flint_nether_ore.json
 d96e98920ec651a2fefa6eaf78ee36897a4ebddb data\fun-mod\loot_table\blocks\red_flint_block.json
+040bd188e732e3c3847a6333f9fd09f91caaeb70 data\fun-mod\loot_table\blocks\red_flint_nether_ore.json
 100cc38071d1a6f5252772fe3c6d65064e18857d data\fun-mod\loot_table\blocks\red_flint_end_ore.json
 811df1b0566846a1c0e28d3ba339a844cdbda267 data\fun-mod\loot_table\blocks\red_flint_lamp.json
 e68d5c08db852980a7423f1065f9b36b3d8fb656 data\fun-mod\loot_table\blocks\raw_red_flint_block.json

@@ -98,10 +98,10 @@ public class ModItemsGroup {
     );
     public static final ItemGroup MACHINES_ACCESSOR = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(FunMod.MOD_ID, "machines_accessor"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.REFINER))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.REFINER_BLOCK))
                     .displayName(Text.translatable("itemgroup.fun-mod.machines_accessor"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModBlocks.REFINER);
+                        entries.add(ModBlocks.REFINER_BLOCK);
                     })
                     .build()
     );

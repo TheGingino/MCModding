@@ -17,7 +17,8 @@ public class ModEntities {
     public static EntityType<ThorkEntity> THORK = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(FunMod.MOD_ID,"thork"),
             EntityType.Builder.<ThorkEntity>create(ThorkEntity::new,
-                    SpawnGroup.MISC).dimensions(0.5f,0.5f).build());
+                    SpawnGroup.MISC).dimensions(0.5f,0.5f).eyeHeight(0.13F)
+                    .maxTrackingRange(4).trackingTickInterval(20).build());
 
 
     public static void registerModEntities() {

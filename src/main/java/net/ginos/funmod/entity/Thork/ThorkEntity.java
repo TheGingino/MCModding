@@ -32,16 +32,18 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class ThorkEntity extends PersistentProjectileEntity {
-    private static final TrackedData<Byte> LOYALTY;
-    private static final TrackedData<Boolean> ENCHANTED;
+    private static final TrackedData<Byte> LOYALTY = DataTracker.registerData(ThorkEntity.class, TrackedDataHandlerRegistry.BYTE);
+    private static final TrackedData<Boolean> ENCHANTED = DataTracker.registerData(ThorkEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+
     private boolean dealtDamage;
     public int returnTimer;
 
     public ThorkEntity(EntityType<? extends ThorkEntity> entityType, World world) {
         super(entityType, world);
     }
+
     public ThorkEntity(World world, LivingEntity owner, ItemStack stack) {
-        super(ModEntities.THORK, owner, world, new ItemStack(ModItems.THORK),null);
+        super(ModEntities.THORK, owner, world, stack, (ItemStack) null);
         this.dataTracker.set(LOYALTY, this.getLoyalty(stack));
         this.dataTracker.set(ENCHANTED, stack.hasGlint());
     }
@@ -63,7 +65,6 @@ public class ThorkEntity extends PersistentProjectileEntity {
         if (this.inGroundTime > 4) {
             this.dealtDamage = true;
         }
-
 
         Entity entity = this.getOwner();
         int i = (Byte) this.dataTracker.get(LOYALTY);
@@ -137,17 +138,10 @@ public class ThorkEntity extends PersistentProjectileEntity {
 
             if (entity instanceof LivingEntity) {
                 LivingEntity livingEntity = (LivingEntity) entity;
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 400));
                 this.knockback(livingEntity, damageSource);
                 this.onHit(livingEntity);
             }
-        }
-        if (entityHitResult.getEntity() instanceof LivingEntity targetEntity) {
-            targetEntity.tiltScreen(20,2);
-            targetEntity.addStatusEffect(new StatusEffectInstance(
-                    StatusEffects.POISON,
-                    200,  // Duration (10 seconds)
-                    1     // Amplifier (level of effect)
-            ));
         }
 
         this.setVelocity(this.getVelocity().multiply(-0.01, -0.1, -0.01));
@@ -176,7 +170,7 @@ public class ThorkEntity extends PersistentProjectileEntity {
     }
 
     protected ItemStack getDefaultItemStack() {
-        return new ItemStack(Items.TRIDENT);
+        return new ItemStack(ModItems.THORK);
     }
 
     protected SoundEvent getHitSound() {
@@ -226,8 +220,4 @@ public class ThorkEntity extends PersistentProjectileEntity {
         return true;
     }
 
-    static {
-        LOYALTY = DataTracker.registerData(TridentEntity.class, TrackedDataHandlerRegistry.BYTE);
-        ENCHANTED = DataTracker.registerData(TridentEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-    }
 }

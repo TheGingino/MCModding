@@ -14,6 +14,7 @@ import net.ginos.funmod.enchantment.ModEnchantmentEffects;
 import net.ginos.funmod.entity.ModBlockEntityTypes;
 import net.ginos.funmod.item.ModItems;
 import net.ginos.funmod.item.ModItemsGroup;
+import net.ginos.funmod.screen.ModScreenHandlers;
 import net.ginos.funmod.util.ModLootTableModifiers;
 import net.ginos.funmod.util.SuperCrusherUseEvent;
 import net.ginos.funmod.world.gen.ModWorldGeneration;
@@ -60,7 +61,8 @@ public class FunMod implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 		ModCommands.registerCommands();
 		ModLootTableModifiers.modifyLootTables();
-		ModBlockEntityTypes.initialize();
+
+
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(ModBlocks.MAGIC_BLOCK)

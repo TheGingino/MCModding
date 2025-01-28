@@ -23,7 +23,7 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
-    public static final Block REFINER = registerBlock("refiner_block",
+    public static final Block REFINER_BLOCK = registerBlock("refiner_block",
             new RefinerBlock(AbstractBlock.Settings.create().strength(4f).nonOpaque()));
 
     public static final Block RAW_RED_FLINT_BLOCK = registerBlock("raw_red_flint_block",
