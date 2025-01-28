@@ -38,9 +38,9 @@ public class RefinerBlockScreen extends HandledScreen<RefinerBlockScreenHandler>
         renderProgressArrow(context, x, y);
     }
 
-    private void renderProgressArrow(DrawContext context, int x, int y){
-        if (handler.isCrafting()){
-            context.drawTexture(TEXTURE, x + 65, y + 10, 176, 0, 8, handler.getScaledProgress());
+    private void renderProgressArrow(DrawContext context, int x, int y) {
+        if(handler.isCrafting()) {
+            context.drawTexture(TEXTURE, x + 85, y + 30, 176, 0, 8, handler.getScaledProgress());
         }
     }
 

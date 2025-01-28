@@ -33,6 +33,5 @@ public class FunModClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ThorkEntityModel.THORK, ThorkEntityModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.THORK, ThorkEntityRenderer::new);
         HandledScreens.register(ModScreenHandlers.REFINER_BLOCK_SCREEN, RefinerBlockScreen::new);
-
     }
 }

@@ -22,9 +22,16 @@ import org.jetbrains.annotations.Nullable;
 
 import java.sql.Ref;
 
-public class RefinerBlock extends BlockWithEntity {
+public class RefinerBlock extends BlockWithEntity implements BlockEntityProvider{
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 12, 16);
+
     public RefinerBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
     }
 
     @Override

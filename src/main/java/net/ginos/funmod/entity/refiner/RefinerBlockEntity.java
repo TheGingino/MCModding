@@ -28,9 +28,10 @@ public class RefinerBlockEntity extends BlockEntity implements ExtendedScreenHan
 
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
-    private static final int TOP_INPUT_SLOT = 0;
-    private static final int MAIN_INPUT_SLOT = 1;
-    private static final int BOTTOM_INPUT_SLOT = 2;
+    //private static final int TOP_INPUT_SLOT = 0;
+    private static final int MAIN_INPUT_SLOT = 0;
+    private static final int OUTPUT_SLOT = 1;
+    //private static final int BOTTOM_INPUT_SLOT = 2;
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
@@ -104,7 +105,7 @@ public class RefinerBlockEntity extends BlockEntity implements ExtendedScreenHan
         this.removeStack(MAIN_INPUT_SLOT, 1);
         ItemStack result = new ItemStack(ModItems.BURNT_COAL);
 
-        this.setStack(MAIN_INPUT_SLOT, new ItemStack(result.getItem(), getStack(MAIN_INPUT_SLOT).getCount() + result.getCount()));
+        this.setStack(OUTPUT_SLOT, new ItemStack(result.getItem(), getStack(OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
     private boolean hasCraftingFinished() {
@@ -134,7 +135,7 @@ public class RefinerBlockEntity extends BlockEntity implements ExtendedScreenHan
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Press");
+        return Text.literal("Refine");
     }
 
     @Nullable
