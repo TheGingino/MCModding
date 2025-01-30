@@ -1,0 +1,10 @@
+{
+  "type": "fun-mod:refiner",
+  "input": {
+    "item": "minecraft:iron_ingot"
+  },
+  "output": {
+    "item": "minecraft:gold_ingot",
+    "count": 1
+  }
+}

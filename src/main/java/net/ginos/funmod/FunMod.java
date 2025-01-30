@@ -14,6 +14,9 @@ import net.ginos.funmod.enchantment.ModEnchantmentEffects;
 import net.ginos.funmod.entity.ModBlockEntityTypes;
 import net.ginos.funmod.item.ModItems;
 import net.ginos.funmod.item.ModItemsGroup;
+import net.ginos.funmod.recipe.ModRecipeType;
+import net.ginos.funmod.recipe.RefinerRecipe;
+import net.ginos.funmod.recipe.RefinerRecipeInput;
 import net.ginos.funmod.screen.ModScreenHandlers;
 import net.ginos.funmod.screen.RefinerBlockScreen;
 import net.ginos.funmod.screen.RefinerBlockScreenHandler;
@@ -21,6 +24,8 @@ import net.ginos.funmod.util.ModLootTableModifiers;
 import net.ginos.funmod.util.SuperCrusherUseEvent;
 import net.ginos.funmod.world.gen.ModWorldGeneration;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,6 +71,7 @@ public class FunMod implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 		ModBlockEntityTypes.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
+		ModRecipeType.registerRecipeTypes();
 
 
 

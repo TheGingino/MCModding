@@ -11,11 +11,18 @@ import net.ginos.funmod.entity.Thork.ThorkEntity;
 import net.ginos.funmod.entity.Thork.ThorkEntityModel;
 import net.ginos.funmod.entity.Thork.ThorkEntityRenderer;
 import net.ginos.funmod.item.custom.ThorkItem;
+import net.ginos.funmod.recipe.ModRecipeType;
+import net.ginos.funmod.recipe.RefinerRecipe;
+import net.ginos.funmod.recipe.RefinerRecipeSerializer;
 import net.ginos.funmod.screen.ModScreenHandlers;
 import net.ginos.funmod.screen.RefinerBlockScreen;
 import net.ginos.funmod.util.ModModelPredicates;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.recipe.RecipeType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 
 public class FunModClient implements ClientModInitializer {
     @Override
